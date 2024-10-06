@@ -643,3 +643,205 @@ max-width: 1158px;
 }
 
 /* ========== / Footer ========== */
+
+
+
+
+/* ====== modal window styles====== */
+.modal-overlay {
+    background-color: rgba(46, 47, 66, 0.4); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-modal {
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    max-width: 408px;
+    max-height: 80%;
+    padding: 24px;
+    position: relative;
+  }
+  
+  .close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px; 
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Стилі для форми */
+
+  .input-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .form-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  fill: #000;
+  }
+
+  .input-wrapper:focus-within .form-icon {
+    fill: #4d5ae5; /* Колір іконки змінюється на червоний */
+}
+  .form-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+  }
+.form-label-line {
+    margin-left: 10px;
+    line-height: 16px; /* Додаємо вирівнювання за висотою */
+    font-size: 12px;
+  }
+
+ .form-group,
+ .form-group-policy{
+    border: none;
+    padding: 0;
+  }
+
+  .form-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #8e8f99;
+    margin-bottom: 4px;
+  }
+
+.group-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #2e2f42;
+}
+
+.form-group .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.form-group-policy .form-field{
+    font-size: 12px;
+    color: #8e8f99;
+    display: flex;
+    flex-direction: row;
+}
+.form-input {
+    width: 100%;
+    padding: 12px 12px 12px 38px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+    resize: none;
+}
+.comment {
+    width: 100%;
+    padding: 12px 12px 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+    resize: none;
+}
+.form-input:focus {
+    border: 1px solid #4d5ae5;
+    outline: none;
+}
+
+
+.form-label-line {
+    margin-left: 8px;
+}
+
+.policy-link {
+    text-decoration: underline;
+    color: #4d5ae5;
+}
+
+      /*
+  .form-label input, .form-label textarea {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .form-label .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  
+  
+  .form-label-line {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+  
+  .policy-link {
+    color: #4D5AE5;
+    text-decoration: underline;
+  }
+  
+  .order-button {
+    background-color: #4d5ae5;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .order-button:hover {
+    background-color: #3c49c8;
+  }
+  
+ */
