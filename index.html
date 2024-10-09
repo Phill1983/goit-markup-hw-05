@@ -498,16 +498,17 @@
     <!--modal window-->
     <div class="modal-overlay">
       <div class="box-modal">
-        <div class="close-btn">
+        <button class="close-btn" type="button">
           <svg class="modal-icons" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
-        </div>
-    
+        </button>
+
+        <p class="group-title">Leave your contacts and we will call you back</p>
+
         <form class="form">
-          <fieldset class="form-group">
-            <legend class="group-title">Leave your contacts and we will call you back</legend>
-    
+
+
             <div class="form-field">
               <label class="form-label" for="username">Name</label>
               <div class="input-wrapper">
@@ -538,24 +539,27 @@
               </div>
             </div>
     
-            <div class="form-field">
+            <div class="form-field text-fild">
               <label class="form-label" for="description">Comment</label>
-              <div class="input-wrapper">
-                <textarea class="form-input comment" name="description" placeholder="Text input" rows="5" id="description"></textarea>
-              </div>
+                <textarea class="form-input comment" name="user-comment" id="user-comment" placeholder="Text input" rows="5"></textarea>
             </div>
-          </fieldset>
+
     
-          <fieldset class="form-group-policy">
-            <div class="form-field">
-              <input type="checkbox" name="privacy" value="on" id="privacy" required />
-              <label class="form-label-line" for="privacy">
+          <!-- <fieldset class="form-group-policy"> -->
+            <div class="form-field privacy-text">
+              <input class="custom-checkbox visually-hidden" type="checkbox" name="user-privacy" value="true" id="user-privacy" required />
+              <label class="form-label-line" for="user-privacy">
+                <span class="chekbox-icon">
+                  <svg class="privacy-checkbox" width="10" height="8">
+                    <use href="./images/icons.svg#icon-Property-1click"></use>
+                  </svg>
+                </span>
                 I accept the terms and conditions of the <a class="policy-link" href="#">Privacy Policy</a>
               </label>
             </div>
-          </fieldset>
+          <!-- </fieldset> -->
     
-          <button class="order-button" type="submit">Send</button>
+          <button class="order-button form-button" type="button">Send</button>
         </form>
       </div>
     </div>

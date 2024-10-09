@@ -326,10 +326,7 @@ h1 {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-.order-button:hover,
-.order-button:focus {
-    background-color: #404BBF;
-}
+
 
 /* ========== / Hero section ========== */
 
@@ -661,7 +658,9 @@ max-width: 1158px;
     align-items: center;
     opacity: 0;
     pointer-events: none;
+
   }
+
   .modal-overlay.is-open {
     opacity: 1;
     pointer-events: auto;
@@ -671,14 +670,16 @@ max-width: 1158px;
   .box-modal {
     background-color: #fcfcfc;
     border-radius: 4px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     width: 408px;
-    height: 584px;
-    padding: 24px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
   }
   
   .close-btn {
@@ -695,8 +696,24 @@ max-width: 1158px;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+  .close-btn:hover {
+    background-color: #404bbf;
+    border: none;
+}
+ .close-btn:focus {
+    background-color: #404bbf;
+ }
+ .modal-icons {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .modal-icons:hover,
+  .modal-icons:focus {
+    fill: #ffffff;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
   /* Стилі для форми */
 
   .input-wrapper {
@@ -706,48 +723,60 @@ max-width: 1158px;
   .form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 48px;
+
   }
   .form-icon {
   position: absolute;
-  left: 10px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  fill: #000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .input-wrapper:focus-within .form-icon {
-    fill: #4d5ae5; /* Колір іконки змінюється на червоний */
+.input-wrapper:focus-within .form-icon {
+    fill: #4d5ae5; /* Колір іконки змінюється на фіолетовий */
 }
-  .form-field {
+
+.form-field {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+.privacy-text {
+    margin-bottom: 24px;
+}
+ 
+.text-fild {
+    margin-bottom: 16px;
   }
   
-  input[type="checkbox"] {
+input[type="checkbox"] {
     margin: 0;
     width: 16px;
     height: 16px;
   }
+
 .form-label-line {
     margin-left: 10px;
     line-height: 16px; /* Додаємо вирівнювання за висотою */
     font-size: 12px;
   }
 
- .form-group,
- .form-group-policy{
+.form-group,
+.form-group-policy{
     border: none;
     padding: 0;
   }
 
-  .form-label {
+.form-label {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: block;
     font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 4px;
   }
@@ -756,6 +785,8 @@ max-width: 1158px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     text-align: center;
     margin-bottom: 16px;
     color: #2e2f42;
@@ -776,20 +807,38 @@ max-width: 1158px;
 }
 .form-input {
     width: 100%;
-    padding: 12px 12px 12px 38px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    height: 40px;
+    padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
     font-size: 12px;
     resize: none;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 .comment {
     width: 100%;
-    padding: 12px 12px 12px 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    height: 120px;
+    padding: 8px 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
     font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     resize: none;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.comment:focus {
+    border-color: #4D5AE5;
+}
+
 .form-input:focus {
     border: 1px solid #4d5ae5;
     outline: none;
@@ -797,12 +846,55 @@ max-width: 1158px;
 
 
 .form-label-line {
-    margin-left: 8px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;  
+    margin-left: 0;
+    color: #8e8f99;
 }
 
 .policy-link {
     text-decoration: underline;
     color: #4d5ae5;
+}
+
+.chekbox-icon{
+    width: 16px; 
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked + .form-label-line > .chekbox-icon{
+    background-color: #404bbf;
+    fill:#E7E9FC;
+    border: none;
+}
+.privacy-checkbox:checked {
+    
+}
+.form-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    display: block;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    max-width: 169px;
+    height: 56px;
+    background-color: #4D5AE5;
+    color:#fff;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
       /*
