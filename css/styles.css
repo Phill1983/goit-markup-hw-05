@@ -666,6 +666,13 @@ padding: 0;
     color: #ffffff;
     
 }
+
+.user-email:hover,
+.user-email:focus {
+    border: 1px solid #31d0aa;
+    border-radius: 4px;
+    outline: none;
+}
 .user-email::placeholder {
     color: #ffffff; 
 }
