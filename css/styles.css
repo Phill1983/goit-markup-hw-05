@@ -748,7 +748,7 @@ padding: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
   }
   
@@ -948,7 +948,7 @@ input[type="checkbox"] {
     fill:#E7E9FC;
     border: none;
 }
-.privacy-checkbox:checked {
+.chekbox-icon:checked {
     background-color: #404bbf;
     order: none;
     fill: #F4F4FD;

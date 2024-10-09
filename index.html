@@ -494,21 +494,22 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-block">
+          <p class="subscribe-form-title">Subscribe</p>
+          <form class="subscribe-form">
+            <label class="lable-email" for="user-email">
+              <input class="user-email" name="user-email" type="email" placeholder="E-mail" id="user-email">
+            </label>
+            <button class="subscribe-submit" type="submit">Subscribe
+              <svg class="submit-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
 
-      <div class="subscribe-block">
-        <p class="subscribe-form-title">Subscribe</p>
-        <form class="subscribe-form">
-          <label class="lable-email" for="user-email">
-            <input class="user-email" name="user-email" type="email" placeholder="E-mail" id="user-email">
-          </label>
-          <button class="subscribe-submit" type="submit">Subscribe
-            <svg class="submit-button-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
+     
     </footer>
 
     <!--modal window-->
@@ -561,7 +562,6 @@
             </div>
 
     
-          <!-- <fieldset class="form-group-policy"> -->
             <div class="form-field privacy-text">
               <input class="custom-checkbox visually-hidden" type="checkbox" name="user-privacy" value="true" id="user-privacy" required />
               <label class="form-label-line" for="user-privacy">
@@ -573,7 +573,7 @@
                 I accept the terms and conditions of the <a class="policy-link" href="#">Privacy Policy</a>
               </label>
             </div>
-          <!-- </fieldset> -->
+
     
           <button class="order-button form-button" type="button">Send</button>
         </form>
